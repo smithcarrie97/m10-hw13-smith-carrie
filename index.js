@@ -62,7 +62,7 @@ function getWeather(query) {
 }
 
 // show error message when location isn't found
-function displayLocNotFound() {
+const displayLocNotFound = () => {
   // clears any previous weather info
   weatherContainer.innerHTML = "";
   // create h2, add error msg, and add to page
@@ -110,9 +110,7 @@ function displayWeatherInfo(weatherObj) {
 
   // current temperature
   let temp = document.createElement('p')
-  temp.textContent = "Current: " +
-    weatherObj.actualTemp +
-    "° F"
+  temp.textContent = `Current: ${weatherObj.actualTemp}° F`
   weatherContainer.appendChild(temp)
 
   // "feels like" temperature
